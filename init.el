@@ -58,6 +58,7 @@
    auto-complete			; complete as you type with overlays
    zencoding-mode			; http://www.emacswiki.org/emacs/ZenCoding
    color-theme		                ; nice looking emacs
+   sunrise-commander
    color-theme-tango))	                ; check out color-theme-solarized
 
 ;;
@@ -99,7 +100,7 @@
   (set-face-font 'default "Monospace-10"))
 
 (global-hl-line-mode)			; highlight current line
-(global-linum-mode 1)			; add line numbers on the left
+(global-linum-mode 0)			; add line numbers on the left
 
 ;; avoid compiz manager rendering bugs
 (add-to-list 'default-frame-alist '(alpha . 100))
@@ -154,13 +155,7 @@
 (setq ido-use-filename-at-point 'guess)
 (setq ido-show-dot-for-dired t)
 
-;; default key to switch buffer is C-x b, but that's not easy enough
-;;
-;; when you do that, to kill emacs either close its frame from the window
-;; manager or do M-x kill-emacs.  Don't need a nice shortcut for a once a
-;; week (or day) action.
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
-(global-set-key (kbd "C-x C-c") 'ido-switch-buffer)
 (global-set-key (kbd "C-x B") 'ibuffer)
 
 ;; C-x C-j opens dired with the cursor right on the file you're editing
